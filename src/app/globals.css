@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "Source Sans 3", serif;
+  background: linear-gradient(to bottom, #010107, #040416, #090924);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+
+.unlist {
+  list-style-type: none;
+}
+
+.list {
+  position: relative;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg); /* Rotate the triangle 180 degrees */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 5px 0; /* Adjust the size of the triangle */
+  border-color: transparent #8FEA8F transparent transparent; /* Adjust the color of the triangle */
 }
