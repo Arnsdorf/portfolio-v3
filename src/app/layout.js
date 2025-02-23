@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
                   content="Sigurd Dam, Web Developer, Full Stack Developer, Next.js, React.js, Tailwind CSS, PHP"/>
             <meta name="author" content="Sigurd Dam"/>
             <meta name="robots" content="index, follow"/>
+            <link rel="icon" type="image/svg"  href="../app/favikon.svg"/>
             <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
             <link
@@ -46,11 +47,7 @@ export default function RootLayout({ children }) {
         <Header/>
         <main className="container mx-auto p-4">{children}</main>
         <AboutMe/>
-        <ProjectCard
-            title="Build Your Own Computer"
-            description="Build your own PC, but in a simpler and more intuitive way. Get guided through the process step by step, ensuring compatibility and performance without the hassle."
-            technologies={["WordPress Headless", "PHP", "React.js"]}
-        />
+        <ProjectCard/>
         <ContactMe/>
 
         </body>
