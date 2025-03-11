@@ -8,6 +8,10 @@ body {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -9,7 +9,7 @@ export default function ContactMe() {
     const isInView = useInView(ref, { once: true }); // 'once: true' betyder, at animationen kun kører én gang
 
     return (
-        <section ref={ref} className="mt-24 mb-24">
+        <footer id="contact" ref={ref} className="mt-24 mb-24">
             <div className="container mx-auto mt-5 px-6">
                 <div className="text-center">
                     {/* Animeret overskrift */}
@@ -53,6 +53,6 @@ export default function ContactMe() {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 }

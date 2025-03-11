@@ -51,6 +51,7 @@ export default function ProjectGrid() {
         >
             {/* Section Title */}
             <motion.h2
+                id="cases"
                 className="text-5xl md:text-left text-center font-bold mb-10"
                 variants={cardVariants}
             >
@@ -65,6 +66,7 @@ export default function ProjectGrid() {
                 <p className="text-gray-400">Loading projects...</p>
             ) : (
                 <motion.div
+
                     className="grid justify-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4"
                     variants={containerVariants}
                 >

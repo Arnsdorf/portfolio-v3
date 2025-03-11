@@ -35,6 +35,7 @@ export default function AboutMe() {
 
     return (
         <motion.section
+            id="about"
             ref={ref}
             className="py-16 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto text-white"
             initial="hidden"
@@ -74,7 +75,7 @@ export default function AboutMe() {
                             <li className="list">JavaScript</li>
                             <li className="list">React.js</li>
                             <li className="list">Next.js</li>
-                            <li className="list">SASS</li>
+                            <li className="list">Rest API</li>
                         </ul>
                         <ul>
                             <li className="list">WordPress Headless</li>
@@ -93,7 +94,7 @@ export default function AboutMe() {
                     animate="visible"
                 >
                     <Image
-                        src="/images/about-profile.png"
+                        src="/images/profil-modified.PNG"
                         alt="Sigurd Dam"
                         width={400}
                         height={400}
