@@ -94,7 +94,7 @@ export default function AboutMe() {
                     animate="visible"
                 >
                     <Image
-                        src="/images/profil-modified.PNG"
+                        src="/images/about-profile.png"
                         alt="Sigurd Dam"
                         width={400}
                         height={400}
