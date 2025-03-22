@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
                   content="Sigurd Dam, Web Developer, Full Stack Developer, Next.js, React.js, Tailwind CSS, PHP"/>
             <meta name="author" content="Sigurd Dam"/>
             <meta name="robots" content="index, follow"/>
-            <link rel="icon" type="image/svg"  href="../app/favikon.svg"/>
+            <link rel="icon" type="image/svg"  href="favikon.svg"/>
             <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
             <link

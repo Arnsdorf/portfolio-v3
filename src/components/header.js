@@ -60,7 +60,7 @@ export default function Header() {
         >
             <div className="container mx-auto flex justify-between items-center p-4">
                 {/* Logo */}
-                <Link href="https://github.com/Arnsdorf" className="text-2xl font-normal text-green-500">
+                <Link href="/page" className="text-2xl font-normal text-green-500">
                     <span className="text-white">&#123;</span>sigurdDam<span className="text-white">&#125;</span>
                 </Link>
 
@@ -106,13 +106,13 @@ export default function Header() {
 
                 {/* Social Icons */}
                 <div className="hidden md:flex items-center space-x-4">
-                    <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
+                    <a href="https://github.com/Arnsdorf" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
                         <FaGithub size={24} />
                     </a>
-                    <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
+                    <a href="https://x.com/ArnsdorfS" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
                         <FaXTwitter size={24} />
                     </a>
-                    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
+                    <a href="https://www.linkedin.com/in/sigurd-dam-124382126" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition">
                         <FaLinkedin size={24} />
                     </a>
                 </div>

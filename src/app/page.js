@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 
 export default function Home() {
@@ -52,15 +51,16 @@ export default function Home() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
                 >
-                    <Link href="/contact">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-6 py-3 text-lg bg-green-500 hover:bg-green-600 text-black font-medium rounded-md transition"
-                        >
-                            Let's talk
-                        </motion.button>
-                    </Link>
+
+                    <motion.a
+                        href="mailto:damsigurd@hotmail.com"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-block px-6 py-3 text-lg bg-green-500 hover:bg-green-600 text-black font-medium rounded-md transition"
+                    >
+                        Let's talk
+                    </motion.a>
+
                 </motion.div>
             </motion.div>
         </main>
