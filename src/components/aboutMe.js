@@ -37,7 +37,8 @@ export default function AboutMe() {
         <motion.section
             id="about"
             ref={ref}
-            className="py-16 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto text-white"
+            className="py-16 my-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto text-white"
+
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={containerVariants}
@@ -66,24 +67,6 @@ export default function AboutMe() {
                         explore innovative approaches to software development.
                     </motion.p>
 
-                    {/* Teknologi liste */}
-                    <motion.p className="mt-6 text-gray-400" variants={textVariants}>
-                        Here are a few technology areas I've recently been engaged with:
-                    </motion.p>
-                    <motion.div className="flex flex-wrap text-gray-400 mt-4" variants={textVariants}>
-                        <ul className="mr-6 unlist">
-                            <li className="list">JavaScript</li>
-                            <li className="list">React.js</li>
-                            <li className="list">Next.js</li>
-                            <li className="list">Rest API</li>
-                        </ul>
-                        <ul>
-                            <li className="list">WordPress Headless</li>
-                            <li className="list">MySQL</li>
-                            <li className="list">Google FireStore</li>
-                            <li className="list">PHP</li>
-                        </ul>
-                    </motion.div>
                 </motion.div>
 
 
@@ -93,13 +76,14 @@ export default function AboutMe() {
                     initial="hidden"
                     animate="visible"
                 >
-                    <Image
+                    <img
                         src="/images/about-profile.png"
                         alt="Sigurd Dam"
-                        width={400}
-                        height={400}
+                        width="400"
+                        height="400"
                         className="rounded-lg shadow-lg"
                     />
+
                 </motion.div>
 
             </div>

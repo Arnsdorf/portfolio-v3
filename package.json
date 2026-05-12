@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "deploy": "next build"
   },
+
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",

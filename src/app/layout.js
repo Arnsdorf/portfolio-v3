@@ -1,9 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import AboutMe from "@/components/about-me.js";
-import ProjectCard from "@/components/project-card.js";
-import ContactMe from "@/components/contact-me";
+import AboutMe from "@/components/aboutMe.js";
+import ProjectCard from "@/components/projectCard.js";
+import ContactMe from "@/components/contactMe";
+import TechAreas from "@/components/techAreas";
 
 // Google Fonts konfiguration
 const geistSans = Geist({
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
         <Header/>
         <main className="container mx-auto p-4">{children}</main>
         <AboutMe/>
+        <TechAreas />
         <ProjectCard/>
         <ContactMe/>
 

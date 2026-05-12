@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
+
 export default function Home() {
     // Reference til sektionen
     const ref = useRef(null);
@@ -24,13 +25,13 @@ export default function Home() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    Full Stack Developer – Crafting{" "}
+                    Building{" "}
                     <span className="relative italic text-green-400">
-                        Scalable & Future-Ready
+                        Modern Web Applications
                     </span>{" "}
-                    Web{" "}
+                    from{" "}
                     <span className="relative text-white font-bold">
-                        Solutions.
+                        Frontend to Backend.
                     </span>
                 </motion.h1>
 
@@ -47,19 +48,31 @@ export default function Home() {
                 {/* Animeret CTA Button */}
                 <motion.div
                     className="mt-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+                    initial={{opacity: 0, y: 20}}
+                    animate={isInView ? {opacity: 1, y: 0} : {}}
+                    transition={{delay: 0.4, duration: 1, ease: "easeOut"}}
                 >
+                    <motion.div className="flex flex-col justify-center sm:flex-row gap-4">
+                        <motion.a
+                            href="/files/CVSigurdDam.pdf"
+                            download
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.95}}
+                            className="inline-block px-6 py-3 text-lg bg-white text-black font-medium rounded-md transition"
+                        >
+                            Get My CV
+                        </motion.a>
 
-                    <motion.a
-                        href="mailto:damsigurd@hotmail.com"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-block px-6 py-3 text-lg bg-green-500 hover:bg-green-600 text-black font-medium rounded-md transition"
-                    >
-                        Let's talk
-                    </motion.a>
+                        <motion.a
+                            href="mailto:damsigurd@hotmail.com"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.95}}
+                            className="inline-block px-6 py-3 text-lg bg-green-500 hover:bg-green-600 text-black font-medium rounded-md transition"
+                        >
+                            Let's Talk
+                        </motion.a>
+                    </motion.div>
+
 
                 </motion.div>
             </motion.div>

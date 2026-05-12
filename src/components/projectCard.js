@@ -52,7 +52,7 @@ export default function ProjectGrid() {
             {/* Section Title */}
             <motion.h2
                 id="cases"
-                className="text-5xl md:text-left text-center font-bold mb-10"
+                className="text-5xl font-bold mb-10"
                 variants={cardVariants}
             >
                 Some <span className="text-green-400 italic">Cases</span> I’ve Worked On.
