@@ -49,13 +49,14 @@ export default function Header() {
     return (
         <nav
             className={`fixed top-0 w-full transition-all duration-300 ease-in-out z-50 ${
-                isScrolled ? "bg-gray-950 opacity-95 shadow-lg py-2" : "bg-transparent py-4"
+                isScrolled ? "bg-black/70 backdrop-blur-lg opacity-95 shadow-lg py-2" : "bg-transparent py-4"
             }`}
         >
             <div className="container mx-auto flex justify-between items-center p-4 relative z-50">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-normal text-green-500">
                     <span className="text-white">&#123;</span>sigurdDam<span className="text-white">&#125;</span>
+
                 </Link>
 
                 {/* Burger Menu Button */}
@@ -67,6 +68,7 @@ export default function Header() {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6">
                     <li><Link href="/#home" className="text-white hover:text-gray-300 transition">Home</Link></li>
+                    <li><Link href="/blog" className="text-white hover:text-gray-300 transition">Blog</Link></li>
                     <li><Link href="/#about" className="text-white hover:text-gray-300 transition">About</Link></li>
                     <li><Link href="/#cases" className="text-white hover:text-gray-300 transition">Cases</Link></li>
                     <li><Link href="/#contact" className="text-white hover:text-gray-300 transition">Contact</Link></li>

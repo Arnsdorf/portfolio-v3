@@ -27,3 +27,16 @@ export const fetchTechnologies = async () => {
         return [];
     }
 };
+
+export const fetchBlog = async () => {
+    try {
+        const response = await fetch(`${BASE_URL}/blog`);
+        if (!response.ok) {
+            throw new Error(`Error fetching technologies: ${response.statusText}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error in fetchBlog:", error);
+        return [];
+    }
+};

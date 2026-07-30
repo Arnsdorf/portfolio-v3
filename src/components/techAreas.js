@@ -64,7 +64,7 @@ export default function TechAreas() {
                 {techs.map((tech) => (
                     <motion.div
                         key={tech.id}
-                        className="w-[100px] h-[100px] bg-[#0E0C23] p-3 rounded-lg flex flex-col items-center justify-center"
+                        className="w-[100px] h-[100px] bg-neutral-900 p-3 rounded flex flex-col items-center justify-center"
                         variants={itemVariants}
                     >
                         <img

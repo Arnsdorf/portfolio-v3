@@ -1,57 +1,35 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import AboutMe from "@/components/aboutMe.js";
-import ProjectCard from "@/components/projectCard.js";
-import ContactMe from "@/components/contactMe";
-import TechAreas from "@/components/techAreas";
 
-// Google Fonts konfiguration
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const sourceSans = Source_Sans_3({
     subsets: ["latin"],
+    weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+    style: ["normal", "italic"],
 });
 
-
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
-// SEO Metadata
 export const metadata = {
-    title: "sigurdDam",
-    description: "Mit personlige portfolio bygget med Next.js og Tailwind CSS.",
+    title: "Sigurd Dam | Full Stack Developer",
+    description:
+        "Sigurd Dam's portfolio showcasing projects, skills, and experience in web development.",
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="da">
-        <head>
-            <title>Sigurd Dam | Full Stack Developer</title>
-            <meta name="description"
-                  content="Sigurd Dam's portfolio showcasing projects, skills, and experience in web development with Next.js, React.js, and more."/>
-            <meta name="keywords"
-                  content="Sigurd Dam, Web Developer, Full Stack Developer, Next.js, React.js, Tailwind CSS, PHP"/>
-            <meta name="author" content="Sigurd Dam"/>
-            <meta name="robots" content="index, follow"/>
-            <link rel="icon" type="image/svg"  href="favikon.svg"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-                rel="stylesheet" crossOrigin="anonymous"/>
+        <html lang="da" className={'bg-neutral-950'}>
+        <body className="min-h-screen bg-neutral-950 text-neutral-50 antialiased">
+        <div
+            aria-hidden="true"
+            className="
+            pointer-events-none
+            fixed inset-0 -z-10
+            bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.08),transparent_45%)]
+        "
+        />
 
-        </head>
-        <body className="bg-gray-100 text-gray-900">
-        <Header/>
-        <main className="container mx-auto p-4">{children}</main>
-        <AboutMe/>
-        <TechAreas />
-        <ProjectCard/>
-        <ContactMe/>
+        <Header />
 
+        <main>{children}</main>
         </body>
         </html>
     );

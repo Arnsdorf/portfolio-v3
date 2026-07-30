@@ -4,9 +4,13 @@
 
 body {
   font-family: "Source Sans 3", serif;
-  background: linear-gradient(to bottom, #010107, #040416, #090924);
 
 }
+
+/*main{
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+}*/
 
 html {
   scroll-behavior: smooth;

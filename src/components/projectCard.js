@@ -74,7 +74,7 @@ export default function ProjectGrid() {
                     {cases.length > 0 ? (
                         cases.map((project) => (
                             <motion.div key={project.id} variants={cardVariants}>
-                                <EvervaultCard className="w-[350px] justify-center hover:-translate-y-2 transition-transform duration-300 flex max-w-s bg-[#0E0C23] rounded-l">
+                                <EvervaultCard className="w-[350px] justify-center hover:-translate-y-2 transition-transform duration-300 flex max-w-s bg-neutral-900 rounded-l">
                                     <div className="p-4">
                                         <div className="flex items-center justify-between">
                                             <Folder className="w-12 h-12 text-green-400" />

@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, {useRef} from "react";
+import {motion, useInView} from "framer-motion";
 import Image from "next/image";
 
 export default function AboutMe() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, {once: true});
 
     // Animation Variants
     const containerVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: {opacity: 0, y: 30},
         visible: {
             opacity: 1,
             y: 0,
@@ -24,20 +24,20 @@ export default function AboutMe() {
     };
 
     const textVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+        hidden: {opacity: 0, y: 30},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.6, ease: "easeOut"}}
     };
 
     const imageVariants = {
-        hidden: { opacity: 0, scale: 0.9 },
-        visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
+        hidden: {opacity: 0, scale: 0.9},
+        visible: {opacity: 1, scale: 1, transition: {duration: 0.8, ease: "easeOut"}}
     };
 
     return (
         <motion.section
             id="about"
             ref={ref}
-            className="py-16 my-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto text-white"
+            className="py-16 my-16 px-6 md:px-12 lg:px-24  max-w-7xl mx-auto text-white"
 
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -50,21 +50,20 @@ export default function AboutMe() {
                         A Little About <span className="text-green-400 italic">Myself</span>.
                     </motion.h2>
                     <motion.p className="text-gray-400 leading-relaxed" variants={textVariants}>
-                        Hello, my name is Sigurd Arnsdorf Dam, and I am a passionate web developer with a background
-                        in multimedia design and web development. I recently completed my bachelor’s top-up in web
-                        development,
-                        having previously earned a multimedia design degree in Nykøbing F. My strong interest in web
-                        development
-                        and databases has been a key driver in my career, as I enjoy building structured, scalable,
-                        and user-friendly digital solutions.
+                        Hi, I’m Sigurd — a web developer with a professional bachelor’s degree in Web Development and a
+                        background in Multimedia Design. I enjoy building structured and user-friendly applications,
+                        with a particular interest in backend development, databases, and the systems that make
+                        everything work behind the scenes.
+
+                        I’m naturally curious and enjoy turning ideas and complex problems into practical digital
+                        solutions. I’m always exploring new technologies and looking for ways to improve both my code
+                        and the way I approach software development.
                     </motion.p>
 
                     <motion.p className="text-gray-400 mt-4 leading-relaxed" variants={textVariants}>
-                        I thrive on problem-solving and continuously challenge myself to learn new technologies and
-                        refine my skills.
-                        Whether it's frontend frameworks, backend development, or database optimization, I am always
-                        eager to
-                        explore innovative approaches to software development.
+                        In September 2026, I’ll begin my master’s degree in Computer Science at Roskilde University,
+                        where I look forward to expanding my knowledge beyond web development and diving deeper into
+                        software engineering, data, and complex IT systems.
                     </motion.p>
 
                 </motion.div>
@@ -77,7 +76,7 @@ export default function AboutMe() {
                     animate="visible"
                 >
                     <img
-                        src="/images/about-profile.png"
+                        src="/images/about-profile.svg"
                         alt="Sigurd Dam"
                         width="400"
                         height="400"
