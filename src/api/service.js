@@ -31,12 +31,43 @@ export const fetchTechnologies = async () => {
 export const fetchBlog = async () => {
     try {
         const response = await fetch(`${BASE_URL}/blog`);
+
         if (!response.ok) {
-            throw new Error(`Error fetching technologies: ${response.statusText}`);
+            throw new Error(
+                `Error fetching blog: ${response.status} ${response.statusText}`
+            );
         }
-        return await response.json();
+
+        const data = await response.json();
+
+        return Array.isArray(data) ? data : [];
     } catch (error) {
         console.error("Error in fetchBlog:", error);
         return [];
+    }
+};
+
+
+
+export const fetchBlogPost = async (slug) => {
+    try {
+        const response = await fetch(
+            `${BASE_URL}/blog/${encodeURIComponent(slug)}`
+        );
+
+        if (response.status === 404) {
+            return null;
+        }
+
+        if (!response.ok) {
+            throw new Error(
+                `Error fetching blog post: ${response.status} ${response.statusText}`
+            );
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(`Error in fetchBlogPost (${slug}):`, error);
+        return null;
     }
 };

@@ -18,8 +18,8 @@ export default async function BlogPage() {
                         Blog
                     </span>
 
-                    <h1 className="mt-4 max-w-3xl text-4xl font-bold text-white sm:text-6xl">
-                        Tanker om kode, teknologi og det, jeg lærer undervejs.
+                    <h1 className="mt-4 max-w-5xl text-4xl font-bold text-white sm:text-6xl">
+                        Tanker og diskussioner om kode, teknologi og det, jeg lærer undervejs.
                     </h1>
 
                     <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
@@ -59,7 +59,7 @@ export default async function BlogPage() {
                                         <img
                                             src={post.featuredImage.url}
                                             alt={post.featuredImage.alt || post.title}
-                                            className="aspect-video w-full object-cover"
+                                            className="aspect-video z-10 w-full object-cover"
                                         />
                                     ) : (
                                         <div className="aspect-video bg-gradient-to-br from-green-400/20 to-neutral-900" />
