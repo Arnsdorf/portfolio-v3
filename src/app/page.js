@@ -17,7 +17,7 @@ export default function Home() {
             {/* Hero Section */}
             <section
                 ref={ref}
-                className="relative flex min-h-screen bg-neutral-950 flex-col items-center justify-center px-4 text-white"
+                className="relative flex min-h-screen flex-col items-center justify-center px-4 text-white"
             >
                 {/* Diskret grid */}
                 <div

@@ -19,12 +19,11 @@ export default async function BlogPage() {
                     </span>
 
                     <h1 className="mt-4 max-w-5xl text-4xl font-bold text-white sm:text-6xl">
-                        Tanker og diskussioner om kode, teknologi og det, jeg lærer undervejs.
+                        Thoughts and discussions on code, technology, and what I learn along the way.
                     </h1>
 
                     <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-                        Guides, projekter og erfaringer med moderne
-                        webudvikling, backend og databaser.
+                        Guides, projects, and experiences with modern web development, backend technologies, and databases.
                     </p>
                 </div>
             </section>
@@ -34,16 +33,16 @@ export default async function BlogPage() {
                     <div className="mb-10 flex items-end justify-between">
                         <div>
                             <p className="text-sm font-medium text-green-400">
-                                Seneste indlæg
+                                Latest posts
                             </p>
 
                             <h2 className="mt-2 text-3xl font-bold text-white">
-                                Fra bloggen
+                                From the blog
                             </h2>
                         </div>
 
                         <p className="hidden text-gray-500 sm:block">
-                            {posts.length} artikler
+                            {posts.length} article
                         </p>
                     </div>
 
